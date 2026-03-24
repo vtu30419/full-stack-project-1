@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Lifecycle & Ticketing</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h1 class="main-title">🎉 Event Lifecycle & Ticketing Platform</h1>
+</header>
+
+<!-- CREATE EVENT -->
+<section class="card">
+    <h2>➕ Create Event</h2>
+
+    <form id="eventForm" class="form-grid">
+        <input type="text" id="eventName" placeholder="Event Name" required>
+        <input type="date" id="eventDate" required>
+        <input type="time" id="eventTime" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="number" id="price" placeholder="Ticket Price (₹)" required>
+        <input type="number" id="quantity" placeholder="Ticket Quantity" required>
+
+        <button type="submit">Create Event</button>
+    </form>
+</section>
+
+<!-- EVENTS -->
+<section>
+    <h2 class="section-title">📅 Available Events</h2>
+    <div id="eventList" class="event-container"></div>
+</section>
+
+<!-- BOOKINGS -->
+<section class="card">
+    <h2>🎟️ Booking Details</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Event</th>
+                    <th>Tickets</th>
+                    <th>Amount (₹)</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Day</th>
+                </tr>
+            </thead>
+            <tbody id="bookingTable"></tbody>
+        </table>
+    </div>
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
